@@ -1,14 +1,18 @@
 # Ajaia Docs – Submission
 
+## Materials Folder
+
+[Google Drive folder containing the source archive, documentation, screenshot, and setup files](https://drive.google.com/drive/folders/14VkjBVsqMbBFyY46WI0kd0SgByUJA-3Y)
+
 ## Live Application
 
-Deployment URL: pending Vercel setup and production PostgreSQL credentials.
+Deployment URL: pending Vercel setup and production PostgreSQL credentials. No live URL is claimed until the database-backed deployment is available.
 
 Local preview: [http://localhost:3000/documents](http://localhost:3000/documents)
 
 ## Source Code
 
-Included in this folder/repository.
+[GitHub source repository](https://github.com/RaoUsama7/Ajaia-Docs) and `ajaia-docs-source.zip` in the Google Drive materials folder.
 
 ## Walkthrough Video
 
@@ -21,6 +25,18 @@ See `WALKTHROUGH_URL.txt`.
 - Taylor Kim — taylor@ajaia.demo
 
 No password is required. Use the **Demo User** selector in the application.
+
+## Local Setup
+
+```bash
+npm install
+copy .env.example .env
+npx prisma migrate deploy
+npm run db:seed
+npm run dev
+```
+
+For a database-free local preview, leave `DATABASE_URL` missing or set to the example placeholder. The development-only file adapter persists data in `.local/ajaia-data.json`.
 
 ## Included Files
 
@@ -50,6 +66,14 @@ No password is required. Use the **Demo User** selector in the application.
 - [x] Error handling
 - [x] Automated tests
 - [ ] Deployment (requires database and Vercel project)
+
+## Working
+
+Create/edit/rename/delete, TipTap formatting, autosave and refresh persistence, `.txt`/`.md` import, demo-user switching, owned/shared sections, editor sharing, owner-only controls, server authorization, local preview persistence, tests, and production build all work.
+
+## Incomplete / Pending
+
+There is no live deployment yet because this environment has no Vercel session or production PostgreSQL credentials. The walkthrough URL is still a placeholder. Real-time simultaneous collaboration, production authentication, comments, version history, DOCX import, and advanced sharing roles are intentionally out of scope.
 
 ## Intentional Scope Cuts
 
