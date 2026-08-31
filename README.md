@@ -4,7 +4,11 @@ Ajaia Docs is a focused collaborative document editor built for a time-boxed pro
 
 ## Live Demo
 
-`https://YOUR-DEPLOYMENT-URL.com` — replace after deployment.
+Deployment is pending because this environment does not have a Vercel account/session or production PostgreSQL credentials. The source repository is available at [github.com/RaoUsama7/Ajaia-Docs](https://github.com/RaoUsama7/Ajaia-Docs), and the local preview runs at [http://localhost:3000/documents](http://localhost:3000/documents).
+
+After deployment, replace this section with the Vercel URL.
+
+![Ajaia Docs dashboard preview](./docs/dashboard-preview.png)
 
 ## Demo Accounts
 
@@ -91,6 +95,16 @@ Taylor cannot open the document until Alex explicitly shares it. Jordan can edit
 ## Architecture
 
 The application uses one Next.js deployment for the client and server boundary. Server actions validate inputs, resolve the selected demo user, and enforce ownership/sharing before Prisma queries mutate data. TipTap JSON is the canonical document format. See [ARCHITECTURE.md](./ARCHITECTURE.md) for details.
+
+## Source Structure
+
+```text
+src/app/                 App Router pages and server actions
+src/components/          Dashboard, import, editor, toolbar, sharing UI
+src/lib/                 Auth, persistence selection, validation, permissions
+prisma/                  PostgreSQL schema, migration, and seed script
+docs/                    Reviewer screenshot
+```
 
 ## Intentional Scope Decisions
 

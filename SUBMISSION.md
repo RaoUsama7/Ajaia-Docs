@@ -2,7 +2,9 @@
 
 ## Live Application
 
-`https://YOUR-LIVE-URL.com`
+Deployment URL: pending Vercel setup and production PostgreSQL credentials.
+
+Local preview: [http://localhost:3000/documents](http://localhost:3000/documents)
 
 ## Source Code
 
@@ -27,6 +29,7 @@ No password is required. Use the **Demo User** selector in the application.
 - `AI_WORKFLOW.md`
 - `SUBMISSION.md`
 - `WALKTHROUGH_URL.txt`
+- `docs/dashboard-preview.png`
 - Source code
 - Database schema and migration
 - Automated tests
